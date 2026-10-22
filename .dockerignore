@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: GPL-2.0-only.
+
+# Version Control
+.git
+.gitignore
+
+# Documentation & Administrative files not needed for building
+.github/
+README.md
+ROADMAP.md
+CHANGELOG.md
+SUPPORT.md
+SECURITY.md
+CONTRIBUTING.md
+CONTRIBUTORS.md
+GOVERNANCE.md
+LICENSE
+
+# Build artifacts & Binaries
+*.o
+*.obj
+*.bin
+*.efi
+*.img
+*.iso
+
+# Temporary files & Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/

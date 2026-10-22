@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: GPL-2.0-only.
+
+* text=auto eol=lf
+
+*.asm text eol=lf
+*.inc text eol=lf

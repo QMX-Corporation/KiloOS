@@ -1,0 +1,324 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+name: KiloOS Advanced Memory Leak Analysis Suite
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  leak-detection-analysis:
+    name: "Enterprise Memory Leak Detection Pipeline"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Valgrind and Low-Level Analysis Tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y valgrind build-essential nasm
+
+      - name: Execute Memory Leak Test 1
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-1
+
+      - name: Execute Memory Leak Test 2
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-2
+
+      - name: Execute Memory Leak Test 3
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-3
+
+      - name: Execute Memory Leak Test 4
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-4
+
+      - name: Execute Memory Leak Test 5
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-5
+
+      - name: Execute Memory Leak Test 6
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-6
+
+      - name: Execute Memory Leak Test 7
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-7
+
+      - name: Execute Memory Leak Test 8
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-8
+
+      - name: Execute Memory Leak Test 9
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-9
+
+      - name: Execute Memory Leak Test 10
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-10
+
+      - name: Execute Memory Leak Test 11
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-11
+
+      - name: Execute Memory Leak Test 12
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-12
+
+      - name: Execute Memory Leak Test 13
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-13
+
+      - name: Execute Memory Leak Test 14
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-14
+
+      - name: Execute Memory Leak Test 15
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-15
+
+      - name: Execute Memory Leak Test 16
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-16
+
+      - name: Execute Memory Leak Test 17
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-17
+
+      - name: Execute Memory Leak Test 18
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-18
+
+      - name: Execute Memory Leak Test 19
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-19
+
+      - name: Execute Memory Leak Test 20
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-20
+
+      - name: Execute Memory Leak Test 21
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-21
+
+      - name: Execute Memory Leak Test 22
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-22
+
+      - name: Execute Memory Leak Test 23
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-23
+
+      - name: Execute Memory Leak Test 24
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-24
+
+      - name: Execute Memory Leak Test 25
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-25
+
+      - name: Execute Memory Leak Test 26
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-26
+
+      - name: Execute Memory Leak Test 27
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-27
+
+      - name: Execute Memory Leak Test 28
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-28
+
+      - name: Execute Memory Leak Test 29
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-29
+
+      - name: Execute Memory Leak Test 30
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-30
+
+      - name: Execute Memory Leak Test 31
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-31
+
+      - name: Execute Memory Leak Test 32
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-32
+
+      - name: Execute Memory Leak Test 33
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-33
+
+      - name: Execute Memory Leak Test 34
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-34
+
+      - name: Execute Memory Leak Test 35
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-35
+
+      - name: Execute Memory Leak Test 36
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-36
+
+      - name: Execute Memory Leak Test 37
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-37
+
+      - name: Execute Memory Leak Test 38
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-38
+
+      - name: Execute Memory Leak Test 39
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-39
+
+      - name: Execute Memory Leak Test 40
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-40
+
+      - name: Execute Memory Leak Test 41
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-41
+
+      - name: Execute Memory Leak Test 42
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-42
+
+      - name: Execute Memory Leak Test 43
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-43
+
+      - name: Execute Memory Leak Test 44
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-44
+
+      - name: Execute Memory Leak Test 45
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-45
+
+      - name: Execute Memory Leak Test 46
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-46
+
+      - name: Execute Memory Leak Test 47
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-47
+
+      - name: Execute Memory Leak Test 48
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-48
+
+      - name: Execute Memory Leak Test 49
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-49
+
+      - name: Execute Memory Leak Test 50
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-50
+
+      - name: Execute Memory Leak Test 51
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-51
+
+      - name: Execute Memory Leak Test 52
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-52
+
+      - name: Execute Memory Leak Test 53
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-53
+
+      - name: Execute Memory Leak Test 54
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-54
+
+      - name: Execute Memory Leak Test 55
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-55
+
+      - name: Execute Memory Leak Test 56
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-56
+
+      - name: Execute Memory Leak Test 57
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-57
+
+      - name: Execute Memory Leak Test 58
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-58
+
+      - name: Execute Memory Leak Test 59
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-59
+
+      - name: Execute Memory Leak Test 60
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-60
+
+      - name: Execute Memory Leak Test 61
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-61
+
+      - name: Execute Memory Leak Test 62
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-62
+
+      - name: Execute Memory Leak Test 63
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-63
+
+      - name: Execute Memory Leak Test 64
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-64
+
+      - name: Execute Memory Leak Test 65
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-65
+
+      - name: Execute Memory Leak Test 66
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-66
+
+      - name: Execute Memory Leak Test 67
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-67
+
+      - name: Execute Memory Leak Test 68
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-68
+
+      - name: Execute Memory Leak Test 69
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-69
+
+      - name: Execute Memory Leak Test 70
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-70
+
+      - name: Execute Memory Leak Test 71
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-71
+
+      - name: Execute Memory Leak Test 72
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-72
+
+      - name: Execute Memory Leak Test 73
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-73
+
+      - name: Execute Memory Leak Test 74
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-74
+
+      - name: Execute Memory Leak Test 75
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-75
+
+      - name: Execute Memory Leak Test 76
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-76
+
+      - name: Execute Memory Leak Test 77
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-77
+
+      - name: Execute Memory Leak Test 78
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-78
+
+      - name: Execute Memory Leak Test 79
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-79
+
+      - name: Execute Memory Leak Test 80
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-80
+
+      - name: Execute Memory Leak Test 81
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-81
+
+      - name: Execute Memory Leak Test 82
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-82
+
+      - name: Execute Memory Leak Test 83
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-83
+
+      - name: Execute Memory Leak Test 84
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-84
+
+      - name: Execute Memory Leak Test 85
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-85
+
+      - name: Execute Memory Leak Test 86
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-86
+
+      - name: Execute Memory Leak Test 87
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-87
+
+      - name: Execute Memory Leak Test 88
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-88
+
+      - name: Execute Memory Leak Test 89
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-89
+
+      - name: Execute Memory Leak Test 90
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-90
+
+      - name: Execute Memory Leak Test 91
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-91
+
+      - name: Execute Memory Leak Test 92
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-92
+
+      - name: Execute Memory Leak Test 93
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-93
+
+      - name: Execute Memory Leak Test 94
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-94
+
+      - name: Execute Memory Leak Test 95
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-95
+
+      - name: Execute Memory Leak Test 96
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-96
+
+      - name: Execute Memory Leak Test 97
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-97
+
+      - name: Execute Memory Leak Test 98
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-98
+
+      - name: Execute Memory Leak Test 99
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-99
+
+      - name: Execute Memory Leak Test 100
+        run: valgrind --leak-check=full --error-exitcode=1 make test-alloc-100

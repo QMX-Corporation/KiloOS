@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0-only.
+
+
+# Compilation / Binarys 
+*.o
+*.obj
+*.bin
+*.efi
+*.img
+*.iso
+
+# Temporary & System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/

@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+[submodule "IntelEmulator"]
+	path = IntelEmulator
+	url = https://github.com/qemu/qemu.git

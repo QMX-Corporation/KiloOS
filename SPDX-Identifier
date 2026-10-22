@@ -1,0 +1,24 @@
+SPDX-License-Identifier: GPL-2.0-only
+
+==================================
+        KiloOS     -  QMX Corporation
+
+----------------------------------
+
+This project uses the SPDX-License-Identifier 
+  default. In the Code Assembly:
+; SPDX-License-Identifier: GPL-2.0-only
+
+In Files using # with comment:
+# SPDX-License-Identifier: GPL-2.0-only
+
+Thanks. For more details, see:
+httpsv://spdx.dev
+
+----------------------------------
+
+<joaoanandalima@gmail.com>,
+dev12124 (Github Account),
+João Guilherme da Silva Freitas Lima (is permitted John),
+brazilian.
+
