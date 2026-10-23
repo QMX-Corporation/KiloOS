@@ -1,0 +1,7 @@
+                     BINARIES OF JFILE-FS
+
+    Extension .pxe: The Executable.
+
+    Extension .lo: The Loader, all programs need a Loader for load the Executable.
+
+    Extension .ico, .webp, .jpg, .png etc: Images.

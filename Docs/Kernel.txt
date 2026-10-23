@@ -1,0 +1,8 @@
+                    THE FLOW
+
+
+    1. The Bootloader loads kiloos-krnl.pxe.
+
+    2. kiloos-krnl.pxe, after preparing the environment, load krnl-os.pxe.
+
+    3. krnl-os.pxe is the Kernel.

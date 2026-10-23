@@ -1,7 +1,7 @@
 ; SPDX-License-Identifier: GPL-2.0-only
 
-%IFNDEF% MYBOOT_HEADER_ASM 
-%DEFINE% MYBOOT_HEADER_ASM
+%ifndef MYBOOT_HEADER_ASM 
+%define MYBOOT_HEADER_ASM
 
 [BITS 64]
 default rel
@@ -84,4 +84,4 @@ dw 0            ; NumberOfRelocations
 dw 0            ; NumberOfLinenumbers 
 dd 0xC0000040   ; Characteristics (Initialized Data, Readable, Writable)
 
-%ENDIF% 
+%endif

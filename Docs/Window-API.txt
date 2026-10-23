@@ -1,0 +1,20 @@
+=======================================
+
+    Window-API (win-api.pxe) 
+
+This API is responsable for renderer Window's.
+
+If a program have the Syscall in Assembly (or uses libs in C/C++ for call Syscalls):
+
+mov rdi, [image_handle + 0x35] ; All Programs needs a ImageHandle (the Address of you Program is loaded)
+mov rsi, [sys_table.apis + 0x08] ; rsi with Window Pointer
+; Is recomended pass a structure with necessary pixels for 
+; no broken the Stack (rdi, rsi, r8, r9.. Stack)
+mov r8, [pixel_table.window + 0x05] 
+
+The Syscall: 
+1. Ring 3 -> Ring 0 (call the Kernel)
+2. Kernel calls the win-api.pxe.
+3. win-api.pxe renderer the Window in r8
+
+Is simple, but, a more "secure".
