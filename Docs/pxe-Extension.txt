@@ -1,0 +1,17 @@
+            .pxe (Extensiom Binary)
+
+
+  This extension have a Small Header with 1024 Bytes (1KB).
+
+A example in Assembly is:
+
+db 'J', 'S', 'FS',34,24,0,0,0 ; 'JSFS/34/24/0/0/0'
+times 512 db 0 ; Is unnecessary, this 512 Bytes have Manufacturer OS (me)
+; This pointer is your MainFunction of your Program
+dd name_of_main_function ; Example: win_api 
+times 1024 db 0 ; Unnecessary, is VendorCode (me) 
+
+The Kernel (krnl-os.pxe) and Loader (kilos-krnl.pxe) in Partition formatted in JFile-FS.
+In JFile-FS, the Loader (kiloos-krnl.pxe) Path: /sys/kernel/__boot/loader/.
+In JFile-FS, the Kernel (krnl-os.pxe) Path: /sys/kernel/__boot/krnl/os/protected/rlos/.
+The Bootloader (myboot.efi) in ESP (EFI System Partition) for UEFI load and executes.

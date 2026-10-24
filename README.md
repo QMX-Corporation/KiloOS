@@ -21,56 +21,6 @@ All developers and contributors should be familiar with:
 * Contributors & Maintainers: See `CONTRIBUTORS.md`
 * License: See `LICENSE`
 
-Repository Layout
------------------
-
-The KiloOS source tree is structured as follows:
-
-```text
-KiloOS/
-├── .devcontainer/
-│   ├── devcontainer.json
-│   └── Dockerfile
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
-│   └── workflows/
-│       ├── check_memory_leak.yml
-│       ├── check_merge_ability.yml
-│       └── ci.yml
-├── IntelEmulator/
-├── Src/
-│   ├── Bootloader/
-│   │   ├── myboot.asm
-│   │   └── myboot_header.asm
-│   └── Drivers/
-│       └── Firmware/
-│           └── Efi/
-│               └── Services/
-│                   ├── capsule.asm
-│                   ├── capsule-loader.asm
-│                   ├── efi.asm
-│                   ├── gop.asm
-│                   └── table.asm
-├── .dockerignore
-├── .editorconfig
-├── .gitattributes
-├── .gitignore
-├── .gitmodules
-├── CHANGELOG.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── CONTRIBUTORS.md
-├── GOVERNANCE.md
-├── LICENSE
-├── README.md
-├── ROADMAP.md
-├── SECURITY.md
-├── SPDX-Identifier
-└── SUPPORT.md
-```
-
 Who Are You?
 -------------
 Find your role below:
