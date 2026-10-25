@@ -28,21 +28,21 @@ align 0x1000
     mov rsi, %2                 ; RSI points to our string path
     mov rdi, [%1]               ; RDI holds the starting directory handle (e.g., Root)
 .path_loop:
-    mov al, byte [rsi]
-    test al, al                 ; Check if we reached the end of the string (null terminator)
+    mov ax, word [rsi]
+    test ax, ax                 ; Check if we reached the end of the string (null terminator)
     jz .path_done
     ; Search for next slash '/' or end of string
     mov rbx, rsi                ; RBX marks the start of the current token/folder name
 .find_slash:
-    mov al, byte [rbx]
-    cmp al, 0
+    mov ax, word [rbx]
+    cmp ax, 0
     je .process_token
-    cmp al, '/'                 ; Did we find a path separator?
+    cmp ax, '/'                 ; Did we find a path separator?
     je .found_slash
-    inc rbx
+    add rbx, 2
     jmp .find_slash
 .found_slash:
-    mov byte [rbx], 0           ; Temporarily replace '/' with 0 to null-terminate the folder name string
+    mov word [rbx], 0           ; Temporarily replace '/' with 0 to null-terminate the folder name string
 .process_token:
     ; Prepare arguments for EFI_FILE_PROTOCOL->Open()
     ; RCX = Current Directory Handle
@@ -64,11 +64,11 @@ align 0x1000
     ; Update current directory handle to the newly opened sub-handle
     mov rdi, [%4]
     ; Restore the slash if we replaced it, and advance pointer
-    cmp byte [rbx], 0
+    cmp word [rbx], 0
     je .path_done
-    mov byte [rbx], '/'         ; Restore original slash
+    mov word [rbx], '/'         ; Restore original slash
     mov rsi, rbx                ; Move pointer past the processed token
-    inc rsi                     ; Skip the slash
+    add rsi, 2                  ; Skip the slash
     jmp .path_loop
 
 .path_done:
@@ -445,7 +445,7 @@ ptr_acpi: db 0
 ; File System Protocol 
 root_directory: dq 0 
 ; The Path of Loader 
-path_to_loader: db "sys/kernel/__boot/loader", 0
+path_to_loader: dw "sys/kernel/__boot/loader", 0
 ; The Final Directory Opened 
 final_loader_dir_handle: dq 0
 ; Destinatary-Final Variable of Loader Kernel Opened 
