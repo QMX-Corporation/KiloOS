@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# =========================================================================
+# KiloOS Main Kconfig - Root Configuration Menu
+# =========================================================================
+
+mainmenu "KiloOS Kernel Configuration"
+
+config KILOOS_VERSION
+    string "KiloOS Version"
+    default "0.1"
+
+config X86_64_ARCH
+    bool
+    default y
+    help
+      Target Arch to x86_64 UEFI Class 3.
+
+
+source "Src/Bootloader/Kconfig"
+source "Src/Loader-Init/Kconfig"
+source "Kernel/Kconfig"

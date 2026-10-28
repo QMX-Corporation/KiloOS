@@ -16,8 +16,6 @@ Example of a E-Mail:
 
   E-Mail: <inlo.lee@gmail.com>,
   Githuh Account: inlolee,
-  Team Favorite of QMX Corporation: KiloOS Drivers,
-  My Future E-Mail: kilo-drivers@operating.sys.org
   
   ## MY REQUISITES 
   [ x ] - 5 Years with KiloOS.

@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# =========================================================================
+# KiloOS Loader Configuration - Initial Loader & Boot Subsystem
+# =========================================================================
+
+menu "Loader & Initialization Subsystem"
+
+config KILOOS_SECONDARY_LOADER
+    bool "Enable Secondary Loader (kiloos-krnl.pxe)"
+    default y
+    help
+      Enables the secondary loader responsible for environment setup,
+      parsing the PXE 1KB header, and handing execution over to the main kernel.
+
+config PXE_HEADER_VERSION
+    string "Default PXE Binary Header Version"
+    depends on KILOOS_SECONDARY_LOADER
+    default "0.1"
+    help
+      Specifies the version string injected into the 1KB PXE header block
+      at offset 0x08 during the build process.
+
+config PXE_HEADER_LICENSE
+    string "Default PXE Binary Header License"
+    depends on KILOOS_SECONDARY_LOADER
+    default "gpl-2.0-only"
+    help
+      Specifies the license string injected into the 1KB PXE header block
+      at offset 0x00 during the build process.
+
+endmenu

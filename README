@@ -1,0 +1,38 @@
+KiloOS v0.1-rc
+===========
+
+KiloOS is a bare-metal, 64-bit operating system written exclusively in Assembly and C targeting UEFI Class 3 environments. It emphasizes architectural purity, high-performance engineering, and zero high-level language abstractions.
+
+Quick Start
+-----------
+
+* Report a bug: See SECURITY.md or .github/ISSUE_TEMPLATE/bug_report.md
+* Organization: QMX Corporation (https://github.com/QMX-Corporation)
+* Build Environment: See .devcontainer/Dockerfile and `ci.yml`
+
+Essential Documentation
+-----------------------
+
+All developers and contributors should be familiar with:
+
+* Building requirements: See ROADMAP.md
+* Code of Conduct: See CODE_OF_CONDUCT.md
+* Contributing Guidelines: See CONTRIBUTING.md
+* Contributors & Maintainers: See CONTRIBUTORS.md
+* License: See LICENSE
+
+Who Are You?
+-------------
+Find your role below:
+  * Core Assembly Developer: Writing low-level UEFI bootloader modules and firmware interfaces.
+  * Systems Architect: Managing memory maps, CPU initialization, and bare-metal execution flow.
+  * Security Expert: Auditing code for memory safety, buffer boundaries, and robust validation.
+  * Maintainer: Reviewing pull requests under the strict BDFL governance model.
+
+Governance 
+-----------
+KiloOS operates under a strict BDFL (Benevolent Dictator For Life) governance model led by João (dev12124). All architectural changes, design choices, and maintainer promotions require direct alignment with project leadership as outlined in GOVERNANCE.md.
+
+License 
+--------
+KiloOS is free software distributed under the terms of the GNU General Public License v2.0 only. See LICENSE for details.

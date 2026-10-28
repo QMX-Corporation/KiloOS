@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# =========================================================================
+# KiloOS Kernel Configuration - Core Subsystem
+# =========================================================================
+
+menu "Kernel Core & Subsystems"
+
+config KILOOS_KERNEL
+    bool "Enable KiloOS Core Kernel"
+    default y
+    help
+      Core execution layer of KiloOS, handling protected mode,
+      higher-half mapping, and system initialization.
+
+config SCHEDULER_MULTIPROCESSING
+    bool "Enable Advanced Process Scheduler"
+    depends on KILOOS_KERNEL
+    default y
+    help
+      Enables the process scheduler supporting priority queues,
+      time slices, and process state transitions (Running, Blocked, Waiting).
+
+config JFILE_FS_SUPPORT
+    bool "Enable Native JFile-FS Support"
+    depends on KILOOS_KERNEL
+    default y
+    help
+      Enables support for the native JFile-FS file system layout,
+      responsible for parsing .pxe binaries and module paths.
+
+endmenu

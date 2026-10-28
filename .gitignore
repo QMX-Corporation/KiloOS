@@ -4,6 +4,7 @@
 # Compilation / Binarys 
 *.o
 *.obj
+*.pxe
 *.bin
 *.efi
 *.img

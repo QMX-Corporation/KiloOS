@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# =========================================================================
+# KiloOS Bootloader Configuration - UEFI Class 3 Subsystem
+# =========================================================================
+
+menu "Bootloader Subsystem (UEFI)"
+
+config KILOOS_BOOTLOADER
+    bool "Enable UEFI Bootloader (myboot.efi)"
+    default y
+    help
+      Enables the primary UEFI bootloader responsible for initializing
+      hardware services, parsing GOP graphics, and loading the secondary loader.
+
+config UEFI_CLASS_3_SUPPORT
+    bool "Force UEFI Class 3 (No CSM / Modern UEFI)"
+    depends on KILOOS_BOOTLOADER
+    default y
+    help
+      Configures the bootloader strictly for UEFI Class 3 environments,
+      bypassing legacy BIOS compatibility (CSM).
+
+endmenu

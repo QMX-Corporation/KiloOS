@@ -15,6 +15,7 @@ The format is based on Keep a Changelog, and KiloOS adheres to strict low-level 
 - Created `GOVERNANCE.md` under the BDFL model (led by João / dev12124).
 - Added `CONTRIBUTING.md`, `CONTRIBUTORS.md`, `SECURITY.md`, and `SUPPORT.md`.
 - Defined the project trajectory in `ROADMAP.md` featuring core UEFI bootloader files **`myboot_header.asm`** and **`myboot.asm`**.
-
+- Terminated Bootloader.
+- 
 ### Changed
 - Refined contribution and maintainer requirements for low-level developers.
